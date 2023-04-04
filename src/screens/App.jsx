@@ -1,26 +1,22 @@
+import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Home from "./Home";
-import Contact from "./Contact";
-import Favs from "./Favs";
-import Detail from "./Detail";
-
+import { navigation } from "../navigation/routes";
 
 function App() {
   return (
-    <div className="App">
+    <Suspense fallback={<h1>Hola, Cargando tu página...</h1>}>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/favs" element={<Favs />} />
-          <Route path="/detail/:id" element={<Detail />} />
+          {navigation.map(({ id, path, Element }) => (
+            <Route key={id} path={path} element={<Element />} />
+          ))}
         </Routes>
         <Footer />
       </BrowserRouter>
-    </div>
+    </Suspense>
   );
 }
 

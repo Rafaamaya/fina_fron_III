@@ -120,3 +120,11 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
