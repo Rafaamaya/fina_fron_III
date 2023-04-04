@@ -8,13 +8,15 @@ function App() {
   return (
     <Suspense fallback={<h1>Hola, Cargando tu página...</h1>}>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          {navigation.map(({ id, path, Element }) => (
-            <Route key={id} path={path} element={<Element />} />
-          ))}
-        </Routes>
-        <Footer />
+        <div className="app">
+          <Navbar />
+          <Routes>
+            {navigation.map(({ id, path, Element }) => (
+              <Route key={id} path={path} element={<Element />} />
+            ))}
+          </Routes>
+          <Footer />
+        </div>
       </BrowserRouter>
     </Suspense>
   );
