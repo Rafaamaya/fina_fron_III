@@ -5,18 +5,18 @@ import { useParams } from "react-router-dom";
 
 const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-  const [beer, setBeer] = useState();
+  const [doctor, setDoctor] = useState();
   const { id } = useParams();
 
-  const getBeer = async () => {
+  const getDetailDentist = async () => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     const data = await res.json();
     console.log(data);
-    setBeer(data);
+    setDoctor(data);
   };
 
   useEffect(() => {
-    getBeer();
+    getDetailDentist();
   }, []);
   return (
     <>
@@ -24,10 +24,10 @@ const Detail = () => {
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <div className="card">
-        <p>{beer?.name}</p>
-        <p>{beer?.email}</p>
-        <p>{beer?.phone} </p>
-        <p>www.{beer?.website} </p>
+        <p>{doctor?.name}</p>
+        <p>{doctor?.email}</p>
+        <p>{doctor?.phone} </p>
+        <p>www.{doctor?.website} </p>
       </div>
     </>
   );
