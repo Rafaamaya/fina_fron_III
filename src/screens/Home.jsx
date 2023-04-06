@@ -21,7 +21,15 @@ const Home = () => {
       <h1>Home</h1>
       <div className="card-grid">
         {dentist.length
-          ? dentist.map((dentist) => <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id}/>)
+          ? dentist.map((dentist) => (
+              <Card
+                showButton={true}
+                key={dentist.id}
+                name={dentist.name}
+                username={dentist.username}
+                id={dentist.id}
+              />
+            ))
           : null}
       </div>
     </main>

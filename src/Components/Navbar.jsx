@@ -11,7 +11,7 @@ const Navbar = () => {
     handleMode();
   }
   return (
-    <nav className={isDarkMode? "dark" : "App"}>
+    <nav className={isDarkMode? "dark" : null}>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       <Link to="/">Home</Link>

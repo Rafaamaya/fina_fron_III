@@ -75,7 +75,6 @@ form{
 
 .card{
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 200px;
@@ -83,12 +82,17 @@ form{
   border: 1px solid rgb(136, 136, 136);
   border-radius: 10%;
 }
+.card > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .card:hover{
   box-shadow: 0px 0px 45px -10px rgba(255, 198, 75, 0.3);
   border: 0.5px solid white;
 }
-.card > img{
+.card div > img{
   width: 150px;
 }
 
@@ -108,7 +112,6 @@ table {
     width: 100%;
     display: table;
     border: 1px solid #ccc;
-
 }
 
 td, th {
