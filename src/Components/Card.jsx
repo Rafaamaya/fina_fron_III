@@ -15,6 +15,7 @@ const Card = ({ name, username, id }) => {
   return (
     <div className="card" onClick={selectItem}>
       {/* En cada card deberan mostrar en name - username y el id */}
+      <img src="./images/doctor.jpg" alt='DH-logo' />
       <p>{id}</p>
       <p>{name}</p>
       <p>{username}</p>
