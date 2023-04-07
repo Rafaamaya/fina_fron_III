@@ -11,7 +11,7 @@ function App() {
   return (
     <Suspense fallback={<h1>Hola, Cargando tu página...</h1>}>
         <BrowserRouter>
-          <div className={isDarkMode? "dark" : "App"}>
+          <div className={isDarkMode? "dark conteiner" : "App conteiner"}>
             <Navbar />
             <Routes>
               {navigation.map(({ id, path, Element }) => (
