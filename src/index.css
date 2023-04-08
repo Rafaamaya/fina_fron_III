@@ -48,6 +48,7 @@ nav{
   justify-content:right;
   padding: 1rem;
   gap: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }  
 
 a{
@@ -68,6 +69,8 @@ footer {
   position: relative;
   bottom: 0;
   margin-top: 2rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
 }
 
 footer > img{
@@ -108,7 +111,11 @@ form{
   border: 0.5px solid white;
 }
 .card div > img{
-  width: 150px;
+  width: 115px;
+  border-radius: 50%;
+}
+.card div > p{
+  margin-top: -15px;
 }
 
 .card-grid{
