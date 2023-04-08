@@ -1,24 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { FavsContext } from "../context/FavsContect";
 
 const Card = ({ name, username, id, showButton }) => {
   const navigate = useNavigate();
+  const { state, dispatch } = useContext(FavsContext);
 
   const addFav = () => {
-    let value: [] = [];
-    if (sessionStorage.getItem("token")) {
-      value = JSON.parse(sessionStorage.getItem("token"));
-      value.push({ id, name, username });
-      sessionStorage.setItem("token", JSON.stringify(value));
-      console.log(value);
-    } else {
-      sessionStorage.setItem("token", JSON.stringify([{ id, name, username }]));
-    }
+    dispatch({ type: "ADD", payload: { id, name, username } });
   };
-
-/*   const borrar = () => {
-    sessionStorage.clear();
-  }; */
+  
+  const takeFav = () => {
+    dispatch({ type: "TAKE", payload: { id, name, username } });
+  };
 
   const selectItem = () => {
     navigate(`/home/detail/${id}`);
@@ -35,9 +29,14 @@ const Card = ({ name, username, id, showButton }) => {
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
       </div>
-      {showButton && (
+
+      {showButton && !state.data.some((element) => element.id === id) ? (
         <button onClick={addFav} className="favButton">
           Add fav
+        </button>
+      ) : (
+        <button onClick={takeFav}>
+          TAKE FAV
         </button>
       )}
 
