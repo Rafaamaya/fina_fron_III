@@ -1,65 +1,67 @@
 import React, { useState } from "react";
+import TextInput from "./TextInput/TextInput";
+import { objeto } from "../constant/Objeto";
 import {
-  ContactForm,
-  ContactInput,
-  BtnSubmit,
-  ErrorMsg,
-  InputContainer,
-} from "./styledComponents";
-/* import TransitionAlerts from '../Components/Alert'
-import { validations } from "./utils/formValidations" */
+  Alert,
+  Button,
+  Container,
+  FormContainer,
+  H1,
+} from "./FormStyled";
+import { validarEmail } from "../utils/validarEmail";
 
-const initialForm = { name: "", email: "" };
+const inputObjet = objeto;
 
-const Form = () => {
-
-  const [form, setForm] = useState(initialForm);
-  const [errors, setErrors] = useState(initialForm);
-  const [nameSendForm, setSendForm] = useState("")
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+const Formulario = () => {
+  const [values, setValues] = useState({ nombre: "", email: "" });
+  const [validacion, setValidacion] = useState(false);
+  const [mensaje, setMensaje] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-/*     const errors = validations(form);
-    if (Object.keys(errors).length === 0) {
-      console.log(form);
-      setSendForm(form.name);
-      setErrors(initialForm);
-      setForm(initialForm);
-    } else setErrors(errors); */
+    console.log("rafa", validarEmail(values.email));
+    if (values.nombre.trim().length > 5 && validarEmail(values.email) ) {
+      setValidacion(false);
+      setMensaje(true)
+    } else {
+      setValidacion(true);
+      setMensaje(false)
+    }
+  };
+
+  const handleChange = (e) => {
+    const key = e.target.name;
+    const value = e.target.value;
+    setValues({ ...values, [key]: value });
   };
 
   return (
-    <ContactForm onSubmit={handleSubmit}>
-      <InputContainer>
-        <ContactInput
-          placeholder="Full name"
-          type="text"
-          value={form.name}
-          name="name"
-          onChange={handleChange}
-        />
-        {errors.name && <ErrorMsg>{errors.name}</ErrorMsg>}
-      </InputContainer>
-
-      <InputContainer>
-        <ContactInput
-          placeholder="Email"
-          type="text"
-          value={form.email}
-          name="email"
-          onChange={handleChange}
-        />
-        {errors.email && <ErrorMsg>{errors.email}</ErrorMsg>}
-      </InputContainer>
-
-      <BtnSubmit type="submit">Submit</BtnSubmit>
-      {/* <TransitionAlerts name={nameSendForm} setSendForm={setSendForm} /> */}
-    </ContactForm>
+    <Container>
+      <FormContainer id="login-form" onSubmit={handleSubmit}>
+        <H1>Want to know more?</H1>
+        <p>Send us your questions and we will contact you</p>
+        {inputObjet.map((field) => (
+          <TextInput
+            key={field.id}
+            name={field.name}
+            placeholder={field.placeholder}
+            value={values[field.name]}
+            onChange={handleChange}
+          />
+        ))}
+        {validacion && (
+          <Alert>"Por favor verifique su información nuevamente"</Alert>
+        )}
+        <Button form="login-form" btn="submit">
+          Enviar
+        </Button>
+        {mensaje && (
+              <Alert>Gracias {values.nombre}, te contactaremos cuando antes vía mail</Alert>
+        )}
+    
+      </FormContainer>
+    </Container>
   );
 };
 
-export default Form;
+export default Formulario;
