@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { FavsContext } from "../context/FavsContect";
+import { FavsContext } from "../../context/FavsContect";
 
 const Card = ({ name, username, id, showButton }) => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { DarkModeContext } from '../context/DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 const Footer = () => {
 

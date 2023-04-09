@@ -1,14 +1,13 @@
 import React, { Suspense, useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
 import { navigation } from "../navigation/routes";
 import { DarkModeContext } from "../context/DarkModeContext";
 import Login from "./Login";
 import ProtectedRoutes from "../navigation/ProtectedRoutes";
+import Navbar from "../components/Navbar/Navbar";
 
 function App() {
-
 
   const { isDarkMode } = useContext(DarkModeContext);
 

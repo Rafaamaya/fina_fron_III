@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import TextInput from "./TextInput/TextInput";
-import { objeto } from "../constant/Objeto";
+import TextInput from "../TextInput/TextInput";
+import { objeto } from "../../constant/Objeto";
 import {
   Alert,
   Button,
@@ -8,7 +8,7 @@ import {
   FormContainer,
   H1,
 } from "./FormStyled";
-import { validarEmail } from "../utils/validarEmail";
+import { validarEmail } from "../../utils/validarEmail";
 
 const inputObjet = objeto;
 

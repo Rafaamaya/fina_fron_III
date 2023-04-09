@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 import { FavsContext } from "../context/FavsContect";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context

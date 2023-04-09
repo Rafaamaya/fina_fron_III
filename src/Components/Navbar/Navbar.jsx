@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { DarkModeContext } from "../context/DarkModeContext";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

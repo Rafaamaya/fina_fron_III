@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
