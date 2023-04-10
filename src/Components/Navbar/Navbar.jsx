@@ -26,13 +26,9 @@ const Navbar = () => {
       <Link to="/contact">Contact</Link>
       <Link to="/favs">Favs</Link>
       <DarkModeIcon
-        className="darkthemeicon"
-        alt="darkmodeicon"
         onClick={handleDarkMode}
       />
       <LogoutIcon
-        className="logout"
-        alt="logouticon"
         onClick={handleLogout}
       />
     </nav>

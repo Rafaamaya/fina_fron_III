@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { DetailContainer, TableDetails, ThField, ThValue, Tr } from "../components/styledComponents";
+import { DetailContainer, TableDetails, ThField, ThValue, Tr } from "./DetailStyle";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

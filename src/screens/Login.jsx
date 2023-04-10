@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import "./LoginStyle.css";
 
 const Login = () => {
   const [values, setValues] = useState({ email: "", password: "" });
-  const {handleLogin} = useContext(AuthContext);
+  const { handleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleAuth = (e) => {
@@ -16,26 +17,33 @@ const Login = () => {
 
   return (
     <div id="login-container">
-      <form onSubmit={handleAuth} id="login-form">
+      <form onSubmit={handleAuth} id="loginform">
+        <h2 id="headerTitle">Login</h2>
         <div>
-          <label htmlFor="email">Email: </label>
-          <input
-            value={values.email}
-            onChange={(e) => setValues({ ...values, email: e.target.value })}
-            type="email"
-            placeholder="Ingresa tu email"
-          />
+          <div className="row">
+            <label>Username</label>
+            <input
+              value={values.email}
+              onChange={(e) => setValues({ ...values, email: e.target.value })}
+              type="email"
+              placeholder="Ingresa tu email"
+            />
+          </div>
+          <div className="row">
+            <label>Password</label>
+            <input
+              value={values.password}
+              onChange={(e) =>
+                setValues({ ...values, password: e.target.value })
+              }
+              type="password"
+              placeholder="Ingresa tu Password"
+            />
+          </div>
+          <div id="button" className="row">
+            <button type="submit">Enviar</button>
+          </div>
         </div>
-        <div>
-          <label htmlFor="password">Password: </label>
-          <input
-            value={values.password}
-            onChange={(e) => setValues({ ...values, password: e.target.value })}
-            type="password"
-            placeholder="Ingresa tu Password"
-          />
-        </div>
-        <button type="submit">Enviar</button>
       </form>
     </div>
   );
