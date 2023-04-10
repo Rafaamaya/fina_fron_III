@@ -1,10 +1,10 @@
 import { lazy } from "react";
 
-const Home = lazy(() => import('../screens/Home'))
-const Contact = lazy(() => import('../screens/Contact'))
-const Favs = lazy(() => import('../screens/Favs'))
-const Detail = lazy(() => import('../screens/Detail'))
-const ErrorPage = lazy(() => import('../screens/ErrorPage'))
+const Home = lazy(() => import('../screens/Home/Home'))
+const Contact = lazy(() => import('../screens/Contact/Contact'))
+const Favs = lazy(() => import('../screens/Favs/Favs'))
+const Detail = lazy(() => import('../screens/Detail/Detail'))
+const ErrorPage = lazy(() => import('../screens/ErrorPage/ErrorPage'))
 
 
 export const navigation = [
