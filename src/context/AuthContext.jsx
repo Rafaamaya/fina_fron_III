@@ -8,8 +8,12 @@ const AuthContextProvider = ({ children }) => {
   );
 
   const handleLogin = () => {
-    setIsLogged(true);
-    localStorage.setItem("auth", JSON.stringify(true));
+    if (!isLogged) {
+      setIsLogged(true);
+      localStorage.setItem("auth", JSON.stringify(true));
+    }else{
+      localStorage.clear()
+    }
   };
 
   const propiedades = {

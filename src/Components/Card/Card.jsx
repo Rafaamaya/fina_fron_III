@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FavsContext } from "../../context/FavsContect";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import "./cardStyle.css";
 
 const Card = ({ name, username, id, showButton }) => {
   const navigate = useNavigate();
@@ -9,7 +12,7 @@ const Card = ({ name, username, id, showButton }) => {
   const addFav = () => {
     dispatch({ type: "ADD", payload: { id, name, username } });
   };
-  
+
   const takeFav = () => {
     dispatch({ type: "TAKE", payload: { id, name, username } });
   };
@@ -21,25 +24,15 @@ const Card = ({ name, username, id, showButton }) => {
   return (
     <div className="card">
       <div onClick={selectItem}>
-        {/* En cada card deberan mostrar en name - username y el id */}
         <img src="./images/doctor.jpg" alt="DH-logo" />
         <h4>{name}</h4>
         <p>{username}</p>
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
       </div>
-
       {showButton && !state.data.some((element) => element.id === id) ? (
-        <button onClick={addFav} className="favButton">
-          Add fav
-        </button>
+        <FavoriteBorderIcon className="favIcon" onClick={addFav}></FavoriteBorderIcon>
       ) : (
-        <button onClick={takeFav}>
-          TAKE FAV
-        </button>
+        <FavoriteIcon className="favIcon" onClick={takeFav}></FavoriteIcon>
       )}
-
-      {/* <button onClick={borrar}>borrar</button> */}
     </div>
   );
 };
