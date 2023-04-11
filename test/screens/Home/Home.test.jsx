@@ -1,12 +1,10 @@
 import { render } from "@testing-library/react";
-import Contact from "../../../src/screens/Contact/Contact";
+import { Home } from "@mui/icons-material";
 
-describe('Pruebas en <Contact>', () => { 
+describe('Pruebas en <Home>', () => { 
     
   test('debe de hacer match con el snapshot', () => {
-    const view  = render ( <Contact/>
-    )
+    const view  = render ( <Home/>)
     expect(view).toMatchSnapshot();
   });
-
-})
+}) 

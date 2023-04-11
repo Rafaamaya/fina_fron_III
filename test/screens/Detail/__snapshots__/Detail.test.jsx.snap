@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <Home> debe de hacer match con el snapshot 1`] = `
+exports[`Pruebas en <Detail> debe de hacer match con el snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
