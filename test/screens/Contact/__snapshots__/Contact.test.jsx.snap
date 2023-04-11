@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Home> debe de hacer match con el snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="contactConteiner"
+      >
+        <div
+          class="sc-dmqHEX icXHCp"
+        >
+          <form
+            class="sc-hLseeU tjtfy"
+            id="login-form"
+          >
+            <h1
+              class="sc-jTrPJq eIfdco"
+            >
+              Want to know more?
+            </h1>
+            <p>
+              Send us your questions and we will contact you
+            </p>
+            <input
+              class="sc-beqWaB dnNIOm"
+              name="nombre"
+              placeholder="Ingrese su nombre"
+              type="text"
+              value=""
+            />
+            <input
+              class="sc-beqWaB dnNIOm"
+              name="email"
+              placeholder="Ingresa tu Email)"
+              type="text"
+              value=""
+            />
+            <button
+              class="sc-eDDNvR bJGXTU"
+              form="login-form"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="contactConteiner"
+    >
+      <div
+        class="sc-dmqHEX icXHCp"
+      >
+        <form
+          class="sc-hLseeU tjtfy"
+          id="login-form"
+        >
+          <h1
+            class="sc-jTrPJq eIfdco"
+          >
+            Want to know more?
+          </h1>
+          <p>
+            Send us your questions and we will contact you
+          </p>
+          <input
+            class="sc-beqWaB dnNIOm"
+            name="nombre"
+            placeholder="Ingrese su nombre"
+            type="text"
+            value=""
+          />
+          <input
+            class="sc-beqWaB dnNIOm"
+            name="email"
+            placeholder="Ingresa tu Email)"
+            type="text"
+            value=""
+          />
+          <button
+            class="sc-eDDNvR bJGXTU"
+            form="login-form"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
